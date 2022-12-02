@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 
 * {
   margin: 0;
@@ -12,22 +12,21 @@ html {
 }
 
 body {
-  font-family: 'Press Start 2P', sans-serif;
-  color: #eee;
-  background-color: #222;
-  /* background-color: #60b347; */
+  font-family: "Press Start 2P", sans-serif;
+  color: #222;
+  background-color: #eee;
 }
 
 /* LAYOUT */
 header {
   position: relative;
   height: 35vh;
-  border-bottom: 7px solid #eee;
+  border-bottom: 7px solid #222;
 }
 
 main {
   height: 65vh;
-  color: #eee;
+  color: #222;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -57,8 +56,8 @@ h1 {
 }
 
 .number {
-  background: #eee;
-  color: #333;
+  background: #222;
+  color: #eee;
   font-size: 6rem;
   width: 15rem;
   padding: 3rem 0rem;
@@ -84,7 +83,7 @@ h1 {
 
 .guess {
   background: none;
-  border: 4px solid #eee;
+  border: 4px solid #222;
   font-family: inherit;
   color: inherit;
   font-size: 5rem;
@@ -97,8 +96,8 @@ h1 {
 
 .btn {
   border: none;
-  background-color: #eee;
-  color: #222;
+  background-color: #222;
+  color: #eee;
   font-size: 2rem;
   font-family: inherit;
   padding: 2rem 3rem;
