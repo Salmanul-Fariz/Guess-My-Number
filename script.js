@@ -1,9 +1,8 @@
 'use strict';
 
 // Create a random number and put to DOM
-const randomNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = randomNumber;
-
+let randomNumber = Math.trunc(Math.random() * 20) + 1;
+console.log(randomNumber);
 let score = 20;
 
 document.querySelector('.check').addEventListener('click', () => {
@@ -17,6 +16,8 @@ document.querySelector('.check').addEventListener('click', () => {
   // Checking the guess value and random number is Correct
   else if (guess === randomNumber) {
     document.querySelector('.message').textContent = 'Correct ✨🎉';
+    document.querySelector('body').style.backgroundColor = '#18bb18';
+    document.querySelector('.number').textContent = randomNumber;
   }
   // Checking the guess value and random number is greater than
   else if (guess > randomNumber) {
@@ -37,4 +38,17 @@ document.querySelector('.check').addEventListener('click', () => {
       document.querySelector('.score').textContent = '0';
     }
   }
+});
+
+// Restart the game
+document.querySelector('.again').addEventListener('click', () => {
+  randomNumber = Math.trunc(Math.random() * 20) + 1;
+  console.log(randomNumber);
+  score = 20;
+
+  document.querySelector('.message').textContent = 'Start guessing...';
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('body').style.backgroundColor = '#eee';
 });
