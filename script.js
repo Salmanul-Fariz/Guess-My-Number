@@ -4,6 +4,7 @@
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
 console.log(randomNumber);
 let score = 20;
+let highScore = 0;
 
 document.querySelector('.check').addEventListener('click', () => {
   // Taking the input value of user enter
@@ -18,6 +19,14 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.message').textContent = 'Correct ✨🎉';
     document.querySelector('body').style.backgroundColor = '#18bb18';
     document.querySelector('.number').textContent = randomNumber;
+    document.querySelector('.check').setAttribute('disabled', '');
+
+    // Setting high Score
+    const currentScore = document.querySelector('.score').textContent;
+    if (currentScore > highScore) {
+      highScore = currentScore;
+      document.querySelector('.highscore').textContent = highScore;
+    }
   }
   // Checking the guess value and random number is greater than
   else if (guess > randomNumber) {
