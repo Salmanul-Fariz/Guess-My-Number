@@ -2,7 +2,6 @@
 
 // Create a random number and put to DOM
 let randomNumber = Math.trunc(Math.random() * 20) + 1;
-console.log(randomNumber);
 let score = 20;
 let highScore = 0;
 
@@ -19,7 +18,7 @@ document.querySelector('.check').addEventListener('click', () => {
     document.querySelector('.message').textContent = 'Correct ✨🎉';
     document.querySelector('body').style.backgroundColor = '#18bb18';
     document.querySelector('.number').textContent = randomNumber;
-    document.querySelector('.check').setAttribute('disabled', '');
+    document.querySelector('.check').disabled = true;
 
     // Setting high Score
     const currentScore = document.querySelector('.score').textContent;
@@ -52,9 +51,9 @@ document.querySelector('.check').addEventListener('click', () => {
 // Restart the game
 document.querySelector('.again').addEventListener('click', () => {
   randomNumber = Math.trunc(Math.random() * 20) + 1;
-  console.log(randomNumber);
   score = 20;
 
+  document.querySelector('.check').disabled = false;
   document.querySelector('.message').textContent = 'Start guessing...';
   document.querySelector('.score').textContent = score;
   document.querySelector('.number').textContent = '?';
